@@ -3,10 +3,10 @@
 > Tiny, type-safe **predicates** — `isString`, `isNumber`, `isPlainObject`, `isEmpty`, and more, all **narrowing** TypeScript type guards. **Zero dependencies**.
 
 [![CI](https://github.com/trananhtung/iskit/actions/workflows/ci.yml/badge.svg)](https://github.com/trananhtung/iskit/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/iskit.svg)](https://www.npmjs.com/package/iskit)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/iskit)](https://bundlephobia.com/package/iskit)
-[![types](https://img.shields.io/npm/types/iskit.svg)](https://www.npmjs.com/package/iskit)
-[![license](https://img.shields.io/npm/l/iskit.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@billdaddy/iskit.svg)](https://www.npmjs.com/package/@billdaddy/iskit)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@billdaddy/iskit)](https://bundlephobia.com/package/@billdaddy/iskit)
+[![types](https://img.shields.io/npm/types/@billdaddy/iskit.svg)](https://www.npmjs.com/package/@billdaddy/iskit)
+[![license](https://img.shields.io/npm/l/@billdaddy/iskit.svg)](./LICENSE)
 
 A bag of `is*` checks you write in every project — but done once, correctly, with
 real **type-guard signatures** so each check narrows the type. `isNumber` rejects
@@ -14,7 +14,7 @@ real **type-guard signatures** so each check narrows the type. `isNumber` reject
 empty if it's a container. **Zero dependencies**, tree-shakeable.
 
 ```ts
-import { isString, isDefined, isEmpty } from "iskit";
+import { isString, isDefined, isEmpty } from "@billdaddy/iskit";
 
 function f(x: unknown) {
   if (isString(x)) x.toUpperCase(); // x is `string`
@@ -39,8 +39,8 @@ if (isEmpty(input)) return;         // "", [], {}, Map/Set(0) → true
 ## Install
 
 ```bash
-npm install iskit
-# or: pnpm add iskit  /  yarn add iskit  /  bun add iskit
+npm install @billdaddy/iskit
+# or: pnpm add @billdaddy/iskit  /  yarn add @billdaddy/iskit  /  bun add @billdaddy/iskit
 ```
 
 ## Primitives
@@ -49,7 +49,7 @@ npm install iskit
 import {
   isString, isNumber, isInteger, isBoolean, isBigInt, isSymbol,
   isFunction, isNull, isUndefined, isNil, isDefined, isPrimitive,
-} from "iskit";
+} from "@billdaddy/iskit";
 
 isNumber(NaN);    // false  (a pass is always a usable number)
 isNumber(42);     // true
@@ -64,7 +64,7 @@ isPrimitive([]);  // false
 import {
   isObject, isArray, isPlainObject, isDate, isRegExp,
   isMap, isSet, isError, isPromise,
-} from "iskit";
+} from "@billdaddy/iskit";
 
 isPlainObject({});            // true
 isPlainObject(new Date());    // false
@@ -76,7 +76,7 @@ isPromise({ then() {} });     // true  (thenables count)
 ## Emptiness
 
 ```ts
-import { isEmpty, isNonEmptyString, isNonEmptyArray } from "iskit";
+import { isEmpty, isNonEmptyString, isNonEmptyArray } from "@billdaddy/iskit";
 
 isEmpty("");          // true
 isEmpty([]);          // true

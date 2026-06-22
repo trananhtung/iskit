@@ -1,6 +1,6 @@
 {
   "name": "@billdaddy/iskit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny, type-safe predicates — isString/isNumber/isPlainObject/isEmpty and more, all narrowing TypeScript type guards. Zero dependencies.",
   "keywords": [
     "type-guard",
